@@ -25,11 +25,11 @@ export function Contact() {
         <Reveal delay={0.15} className="relative mt-10">
           <DoodleArrow className="absolute -top-10 left-1/2 hidden h-16 w-16 -translate-x-32 -rotate-45 text-accent sm:block" />
           <a
-            href="mailto:kontakt@brunopalys.pl"
-            className="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 text-lg font-bold text-accent-ink transition-transform hover:scale-105"
+            href="mailto:ogarniamrolki@brunopalys.pl"
+            className="inline-flex max-w-full items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-bold break-all text-accent-ink transition-transform hover:scale-105 sm:gap-3 sm:px-8 sm:py-4 sm:text-lg"
           >
-            <Mail size={20} />
-            kontakt@brunopalys.pl
+            <Mail size={18} className="shrink-0" />
+            ogarniamrolki@brunopalys.pl
           </a>
         </Reveal>
 

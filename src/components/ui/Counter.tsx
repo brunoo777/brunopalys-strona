@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function Counter({
   to,
@@ -12,12 +11,9 @@ export function Counter({
   suffix?: string;
   duration?: number;
 }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [value, setValue] = useState(0);
 
   useEffect(() => {
-    if (!isInView) return;
     let frame: number;
     const start = performance.now();
 
@@ -29,10 +25,10 @@ export function Counter({
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [isInView, to, duration]);
+  }, [to, duration]);
 
   return (
-    <span ref={ref}>
+    <span>
       {value}
       {suffix}
     </span>

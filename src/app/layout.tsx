@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bruno Pałys — Montaż kreacji do Meta Ads dla agencji",
+  title: "Bruno Pałys - Montaż rolek dla firm · agencji marketingowych, meta ads",
   description:
     "Przejmuję montaż kreacji reklamowych do Meta Ads. Wyślij brief i surowe materiały — w 24-48h dostajesz gotowe kreacje do akceptacji.",
 };

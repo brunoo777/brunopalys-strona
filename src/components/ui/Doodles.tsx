@@ -56,12 +56,19 @@ export function DoodleLike({ className }: { className?: string }) {
 
 export function DoodleCircle({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden>
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      preserveAspectRatio="none"
+      className={className}
+      aria-hidden
+    >
       <path
         d="M50 8 C 74 8 90 28 90 50 C 90 74 70 92 48 90 C 26 88 10 70 10 50 C 10 30 26 10 50 8"
         stroke="currentColor"
-        strokeWidth="4"
+        strokeWidth="3"
         strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
       />
     </svg>
   );

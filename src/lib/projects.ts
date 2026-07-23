@@ -28,7 +28,6 @@ export const PROJECTS: Project[] = [
   {
     title: "Projekt 7",
     category: "Kreacja Meta Ads",
-    embedUrl:
-      "https://drive.google.com/file/d/1KLztDaUWPi_weVmHoy4y79Jjz1hz1ZjG/preview",
+    embedUrl: "https://www.youtube.com/embed/sc-GIYFOEAg",
   },
 ];

@@ -110,19 +110,19 @@ export default function HistoriaPage() {
         </div>
       </SectionBlock>
 
-      <section className="relative overflow-hidden border-t border-white/10 px-6 py-24 text-center sm:py-32">
-        <h2 className="text-display text-3xl sm:text-5xl">
-          Gotowy, żebym ogarnął <span className="text-accent">Twoje kreacje?</span>
-        </h2>
-        <p className="mx-auto mt-4 max-w-md text-muted">
-          Wyślij brief i surowe materiały — w 24-48h dostajesz gotowe kreacje
-          dopracowane do akceptacji.
-        </p>
+<section className="relative overflow-hidden border-t border-white/10 px-6 py-24 text-center sm:py-32">
+  <h2 className="text-display text-3xl sm:text-5xl">
+    Gotowy, żebym ogarnął <span className="text-accent">Twoje rolki?</span>
+  </h2>
+  <p className="mx-auto mt-4 max-w-md text-muted">
+    Kliknij poniżej i zostaw kontakt — odezwę się w ciągu 24h.
+  </p>
 
-        <div className="mt-12 flex justify-center">
-          <CtaButton />
-        </div>
-      </section>
+  {/* Zmieniono mt-12 na mt-20 (lub mt-24, jeśli chcesz jeszcze więcej miejsca) */}
+  <div className="mt-20 flex justify-center">
+    <CtaButton />
+  </div>
+</section>
     </main>
   );
 }

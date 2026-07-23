@@ -1,17 +1,29 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
 import { DoodleArrow, DoodleLike } from "../ui/Doodles";
 
 const STATS = [
   { value: "24-48h", label: "standardowy czas realizacji" },
   { value: "Bez limitu", label: "poprawek do akceptacji" },
-  { value: "PROFESJONALNY LOOK", label: "Montaż nastawiony na reklamę, nie na efekciarstwo" },
+  { value: "PROFESJONA­LNY LOOK", label: "Montaż nastawiony na reklamę, nie na efekciarstwo" },
 ];
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const video = videoRef.current;
+      if (!video) return;
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="o-mnie"
@@ -90,8 +102,8 @@ export function Hero() {
             className="mt-14 grid grid-cols-3 gap-6 border-t border-white/10 pt-8"
           >
             {STATS.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-display text-3xl text-accent sm:text-4xl">
+              <div key={stat.label} className="min-w-0">
+                <div className="text-display break-words text-2xl text-accent sm:text-4xl">
                   {stat.value}
                 </div>
                 <div className="mt-1 text-xs text-muted sm:text-sm">
@@ -111,27 +123,18 @@ export function Hero() {
           <DoodleLike className="doodle-spin absolute -top-10 -right-8 h-16 w-16 text-accent" />
           <DoodleArrow className="absolute -bottom-12 -left-10 h-20 w-20 text-violet" />
 
-          <div className="relative rounded-[2rem] border border-white/10 bg-bg-soft/80 p-3 shadow-2xl backdrop-blur">
-            <div className="group relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-              <Image
-                src="/images/avatar.png"
-                alt="Bruno Pałys"
-                fill
-                sizes="(min-width: 1024px) 384px, 90vw"
-                className="object-contain object-bottom p-4 transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 group-hover:drop-shadow-[0_0_30px_rgba(255,209,0,0.55)]"
-                priority
-              />
-            </div>
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            playsInline
+            preload="auto"
+            className="aspect-square h-auto w-full"
+          >
+            <source src="/videos/hero-avatar.webm" type="video/webm" />
+            <source src="/videos/hero-avatar.mov" type="video/quicktime" />
+          </video>
 
-            <a
-              href="/historia"
-              className="absolute -bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-xs font-bold text-accent-ink shadow-lg transition-transform hover:scale-105"
-            >
-              <Play size={14} fill="currentColor" />
-              TROCHĘ O MNIE
-            </a>
-          </div>
-          
         </motion.div>
       </div>
       
