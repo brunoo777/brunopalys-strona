@@ -24,10 +24,5 @@ export const PROJECTS: Project[] = [
     title: "Projekt 6",
     category: "Youtube shorts, technostrefa",
     embedUrl: "https://www.youtube.com/embed/kXGlG73UUdI",
-  },
-  {
-    title: "Projekt 7",
-    category: "Kreacja Meta Ads",
-    embedUrl: "https://www.youtube.com/embed/sc-GIYFOEAg",
-  },
+  }
 ];
