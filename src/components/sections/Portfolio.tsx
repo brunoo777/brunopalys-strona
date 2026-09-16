@@ -32,7 +32,7 @@ export function Portfolio() {
             <h2 className="text-display text-4xl leading-[0.95] sm:text-5xl md:text-6xl">
               Kreacje reklamowe i{" "}
               <Link
-                href="/historia"
+                href="/portfolio"
                 className="text-accent underline decoration-double decoration-4 underline-offset-8 transition-opacity hover:opacity-80"
               >
                 NIE TYLKO
