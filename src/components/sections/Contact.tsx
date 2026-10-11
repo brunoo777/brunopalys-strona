@@ -10,11 +10,7 @@ export function Contact() {
   return (
     <section id="kontakt" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <SectionHeading
-          eyebrow="Kontakt"
-          title="Jeśli masz jakieś pytania"
-          align="center"
-        />
+        <SectionHeading title="Jeśli masz jakieś pytania" align="center" />
 
         <Reveal delay={0.1}>
           <p className="mx-auto mt-6 max-w-lg text-muted">

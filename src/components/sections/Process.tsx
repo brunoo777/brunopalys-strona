@@ -1,60 +1,52 @@
-"use client";
-
 import { SectionHeading } from "../ui/SectionHeading";
 import { Reveal } from "../ui/Reveal";
 
 const STEPS = [
   {
-    title: "Przesyłasz brief i materiały",
+    title: "Rozmowa",
     description:
-      "Wysyłasz cel kampanii oraz surowe nagrania — bez zbędnych formalności.",
+      "Mówisz mi, co sprzedajesz i do kogo chcesz dotrzeć. Ustalamy cel rolek i ile ich potrzebujesz.",
   },
   {
-    title: "Analizuję projekt",
+    title: "Scenariusz",
     description:
-      "Jeśli widzę możliwość poprawy, proponuję lepszy hook, tempo albo montaż ratujący słabszy materiał.",
+      "Piszę scenariusze z mocnym początkiem, dopasowane do Twojej firmy. Dostajesz je do akceptacji, zanim cokolwiek nagram.",
   },
   {
-    title: "Montuję kreacje",
+    title: "Nagrywanie",
+    description: "Nagrywam materiał na miejscu, własnym sprzętem.",
+  },
+  {
+    title: "Montaż",
     description:
-      "Zgodnie z celem kampanii i charakterem marki — pod reklamę, nie pod efekciarstwo.",
+      "Montuję rolki pod reklamę i social media — tempo, napisy, dźwięk, bez efekciarstwa.",
   },
   {
-    title: "Wysyłam do akceptacji",
-    description: "Otrzymujesz gotowe kreacje do przejrzenia i komentarzy.",
-  },
-  {
-    title: "Wprowadzam poprawki",
+    title: "Poprawki i gotowe pliki",
     description:
-      "Nielimitowana liczba poprawek, gwarantuję pożądany efekt końcowy.",
-  },
-  {
-    title: "Otrzymujesz gotowe pliki",
-    description: "Gotowe do wysłania klientowi lub uruchomienia w kampanii.",
+      "Wysyłam rolki do akceptacji, wprowadzam poprawki i oddaję gotowe pliki do publikacji.",
   },
 ];
 
 export function Process() {
   return (
-    <section id="proces" className="relative py-24 sm:py-32">
+    <section id="proces" className="py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Jak wygląda współpraca" title="jasny proces" />
+        <SectionHeading title="Jak to wygląda" />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {STEPS.map((step, i) => (
-            <Reveal key={step.title} delay={(i % 3) * 0.08}>
-              <div className="h-full rounded-2xl border border-white/10 bg-bg-soft p-6">
-                <span className="text-display text-3xl text-accent">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 text-lg font-bold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {step.description}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="mt-12">
+          <ol className="border-t border-white/10">
+            {STEPS.map((step) => (
+              <li
+                key={step.title}
+                className="grid gap-2 border-b border-white/10 py-6 md:grid-cols-[16rem_1fr] md:gap-8"
+              >
+                <h3 className="text-lg font-bold">{step.title}</h3>
+                <p className="text-muted">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </Reveal>
       </div>
     </section>
   );

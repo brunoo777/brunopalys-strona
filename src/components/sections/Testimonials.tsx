@@ -35,7 +35,7 @@ export function Testimonials() {
   return (
     <section id="opinie" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading eyebrow="Opinie klientów" title="Co o mnie mówią" />
+        <SectionHeading title="Co o mnie mówią" />
 
         <div className="mt-14 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6">
           {TESTIMONIALS.map((t, i) => (

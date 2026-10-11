@@ -11,10 +11,6 @@ export function Portfolio() {
     <section id="portfolio" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="relative flex flex-col items-start gap-3 text-left">
-          <span className="inline-flex items-center rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-ink">
-            Moje prace
-          </span>
-
           <div className="relative">
             {/* Zmieniono -top-16 na -top-24 (możesz też użyć -top-28 jeśli chcesz jeszcze wyżej) */}
             <div className="pointer-events-none absolute -top-24 right-0 hidden -rotate-6 items-end gap-2 sm:flex">
